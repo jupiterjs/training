@@ -1,0 +1,9 @@
+
+
+.list {
+	float: left;
+	width: 20%;
+	border: solid 1px gray;
+	height: 200px;
+	overflow-y: auto;
+}
