@@ -1,4 +1,4 @@
-require(['acme/fixture/fixture'], function(){
+require(['jupiter/fixture/fixture'], function(){
 	var catCount = 7,
 		compCount = 5,
 		locCount = 10,
@@ -21,7 +21,7 @@ require(['acme/fixture/fixture'], function(){
 	
 	
 	
-	$.acme_fixture("/services/contacts", function(original){
+	$.jupiter_fixture("/services/contacts", function(original){
 		
 		var total = contacts.slice(0),
 			offset = parseInt(original.data.offset, 10) || 0,
