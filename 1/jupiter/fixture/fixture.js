@@ -2,7 +2,7 @@ require(['jquery'], function($){
 
 var maps = {};
 
-$.acme_fixture = function(url, newUrl){
+$.jupiter_fixture = function(url, newUrl){
 	maps[url] = newUrl;
 };
 

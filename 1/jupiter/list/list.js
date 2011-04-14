@@ -10,7 +10,7 @@ require(['jquery'], function($){
 		}
 	};
 	
-	$.fn.acme_list = function(url){
+	$.fn.jupiter_list = function(url){
 		this.addClass('list')
 		var self = this;
 		if(typeof url == 'string'){

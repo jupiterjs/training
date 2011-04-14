@@ -14,4 +14,6 @@ require(['jquery'], function($){
 	$.fn.style$ = function(){
 		return style$(this)
 	}
+	
+
 })
