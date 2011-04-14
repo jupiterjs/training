@@ -1,0 +1,37 @@
+<html>
+    <head>
+    	<style>
+    		.contextmenu{
+    			color:Blue;
+				text-decoration:underline;
+				font-size:24px;
+				padding:5px;
+				margin:5px;
+				background-color:#eeeeee;
+				width:200px;
+    		}
+			.dblclick{
+				background-color:#aaaaaa;
+			}
+			.hover{
+				background-color:Green;
+			}
+    	</style>
+    </head>
+    <body>
+    	<div id='dest'></div>
+    	<script id='menu'>
+    		<div class='contextmenu'>
+    			This is a menu
+    		</div>
+    	</script>
+	    <script type='text/javascript' src='jquery.js'></script>
+	    <script type='text/javascript' src='contextmenu.js'></script>
+	    <script type='text/javascript'>
+	    	var menu = $("#menu").html();
+	    	$(document.body).click(function(){
+	    		$("#dest").contextmenu(menu);
+	    	})
+	    </script>
+    </body>
+</html>
