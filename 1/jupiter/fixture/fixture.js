@@ -1,4 +1,4 @@
-require(['jquery'], function($){
+define(['jquery'], function($){
 
 var maps = {};
 

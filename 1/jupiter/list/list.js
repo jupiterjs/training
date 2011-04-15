@@ -1,24 +1,24 @@
-require(['jquery'], function($){
+define(['jquery'], function($){
 	
 	
 	var listItems = function(parent, items){
 		for(var i =0; i < items.length; i++){
 			var item =  items[i]
 			$('<li/>').data('item',item)
-				.appendTo(parent).text(item.name)
+				.appendTo(parent).html(item.name)
 		}
 	};
 	
 	$.fn.jupiter_list = function(url){
 		this.addClass('list')
 		var self = this;
-		if(typeof url == 'string'){
-			$.get(url, {}, function(items){
-				listItems(self, items)
-			}, 'json');
-		}else{
-			listItems(this, url);
-		}
+		
+		$.get(url, {}, function(items){
+			listItems(self, items)
+		}, 'json');
+		
+		
+		
 		
 		
 		

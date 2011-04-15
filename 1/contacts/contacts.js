@@ -1,4 +1,5 @@
-require(['jupiter/style/style',
+require(['contacts/fixtures/fixtures',
+		 'jupiter/style/style',
 		 'jupiter/create_list/create_list'], function(){
 	
 	

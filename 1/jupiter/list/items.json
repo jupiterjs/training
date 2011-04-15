@@ -1,6 +1,6 @@
 [
- {"name" : "RequireJS" },
- {"name" : "StealJS"},
- {"name" : "LabJS"},
- {"name" : "GitJS"}
+ {"name" : "RequireJS", "url" : "http://requirejs.org" },
+ {"name" : "StealJS", "url" : "http://stealjs.com"},
+ {"name" : "LabJS", "url" : "http://requirejs.org"},
+ {"name" : "GitJS", "url" : "http://requirejs.org"}
 ]
