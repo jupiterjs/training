@@ -1,24 +1,21 @@
-define(['jquery','jupiter/tmpl'], function($){
+define(['jquery'], function($){
 	
 	
 	var listItems = function(parent, items){
 		
 	};
 	
-	$.fn.jupiter_list = function(options){
+	$.fn.jupiter_list = function(url){
 		this.addClass('list')
 		var self = this;
 		
-		$.when($.get(options.url,{},'json'),
-				$.get(options.row,{},'text')).then(function(items, row){
+		$.get(url, {}, function(items){
 			for(var i =0; i < items.length; i++){
 				var item =  items[i]
 				$('<li/>').data('item',item)
-					.appendTo(self).html($.tmpl(row, item))
-			}		
-		})
-		
-		
+					.appendTo(self).html(item.name)
+			}
+		}, 'json');
 		
 		
 		
