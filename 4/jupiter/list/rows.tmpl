@@ -1,0 +1,5 @@
+{{each(i, item) items}}
+	<li {{html $.View.data("item", item) }}>
+		{{html $.View(row, item) }}
+	</li>
+{{/each}}

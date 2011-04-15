@@ -1,0 +1,6 @@
+[
+ {"name" : "RequireJS", "from_user": "1", "text" : "hello" },
+ {"name" : "StealJS", "from_user": "2", "text" : "hello"},
+ {"name" : "LabJS", "from_user": "3", "text" : "hello"},
+ {"name" : "GitJS", "from_user": "4", "text" : "hello"}
+]
