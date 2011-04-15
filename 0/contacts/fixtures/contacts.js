@@ -1,4 +1,4 @@
-require(['jupiter/fixture/fixture'], function(){
+define(['jupiter/fixture/fixture'], function(){
 	var catCount = 7,
 		compCount = 5,
 		locCount = 10,
