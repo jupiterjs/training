@@ -18,7 +18,7 @@ define(['jupiter/fixture/fixture'], function(){
 			categoryId : randId(catCount),
 			locationId : randId(locCount),
 			companyId : randId(compCount),
-			createdAt : new Date( now.getTime()*Math.random()  )
+			createdAt : new Date( Math.round( now.getTime()*Math.random() )  ).getTime()
 		})
 	}
 	
