@@ -1,30 +1,35 @@
-require(['contacts/models/category',
+require(['contacts/fixtures/fixtures',
+		 'contacts/models/category',
 		 'contacts/models/company',
 		 'contacts/models/contact',
 		 'contacts/models/location',
-         'jupiter/list/list'], function(Category, Company, Contact, Location){
+         'jupiter/create_list/create_list'], function(_,Category, Company, Contact, Location){
 	
 
+	window.Category = Category
 	
-	$("#categories ul").jupiter_list({
-		model: Category,
-		row : "templates/category.tmpl"
+	$("#categories").jupiter_create_list({
+		model : Category,
+		row : 'templates/category.tmpl',
+		form: "<form><input name='name'/></form>"
+	});
+
+	$("#locations").jupiter_create_list({
+		model : Location,
+		row : 'templates/location.tmpl',
+		form: "<form><input name='name'/></form>"
 	});
 	
-	
-	$("#locations ul").jupiter_list({
-		model: Location,
-		row : "templates/location.tmpl"
+	$("#companies").jupiter_create_list({
+		model : Company,
+		row : 'templates/company.tmpl',
+		form: "<form><input name='name'/></form>"
 	});
 	
-	$("#companies ul").jupiter_list({
-		model: Company,
-		row : "templates/company.tmpl"
+	$("#contacts").jupiter_create_list({
+		model : Contact,
+		row : 'templates/contact.tmpl',
+		form: "<form><input name='name'/></form>"
 	});
 	
-	
-	$("#contacts ul").jupiter_list({
-		model: Contact,
-		row : "templates/contact.tmpl"
-	});
 })

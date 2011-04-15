@@ -10,28 +10,28 @@ require(['contacts/models/contact',
 		findAll : '/services/categories',
 		row : 'templates/category.tmpl',
 		create: '/services/categories',
-		form: "<form><input type='name'/></form>"
+		form: "<form><input name='name'/></form>"
 	});
 
 	$("#locations").jupiter_create_list({
 		findAll : '/services/locations',
 		row : 'templates/location.tmpl',
 		create: '/services/locations',
-		form: "<form><input type='name'/></form>"
+		form: "<form><input name='name'/></form>"
 	});
 	
 	$("#companies").jupiter_create_list({
 		findAll : '/services/companies',
 		row : 'templates/company.tmpl',
 		create: '/services/companies',
-		form: "<form><input type='name'/></form>"
+		form: "<form><input name='name'/></form>"
 	});
 	
 	$("#contacts").jupiter_create_list({
 		model : Contact,
 		row : 'templates/contact.tmpl',
 		create: '/services/contacts',
-		form: "<form><input type='name'/></form>"
+		form: "<form><input name='name'/></form>"
 	});
 	
 	

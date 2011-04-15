@@ -6,37 +6,31 @@
 	<body>
 		<div id='filters'>
 			<div id='categories' class='ui-widget ui-widget-content ui-corner-all'>
-				<h3 class='ui-helper-reset ui-state-default ui-state-active ui-corner-top'>
-					Category <a href='javascript://'>+</a></h3>
+				<h3 class='ui-helper-reset ui-state-default ui-state-active ui-corner-top'>Category</h3>
 				<ul></ul>
 			</div>
 			
 			<div id='companies' class='ui-widget ui-widget-content ui-corner-all'>
-				<h3 class='ui-helper-reset ui-state-default ui-state-active ui-corner-top'>
-					Company
-					<a href='javascript://'>+</a></h3>
+				<h3 class='ui-helper-reset ui-state-default ui-state-active ui-corner-top'>Company</h3>
 				<ul></ul>
 			</div>
 			
 			<div id='locations' class='ui-widget ui-widget-content ui-corner-all'>
-				<h3 class='ui-helper-reset ui-state-default ui-state-active ui-corner-top'>
-					Location
-					<a href='javascript://'>+</a></h3>
+				<h3 class='ui-helper-reset ui-state-default ui-state-active ui-corner-top'>Location</h3>
 				<ul></ul>
 			</div>
 		</div>
 		<div id='bottom'>
 			<div id='contacts' class='ui-widget ui-widget-content ui-corner-all'>
-				<h3 class='ui-helper-reset ui-state-default ui-state-active ui-corner-top'>
-					Contacts <a href='javascript://'>+</a>
-				</h3>
+				<h3 class='ui-helper-reset ui-state-default ui-state-active ui-corner-top'>Contacts</h3>
 				<ul></ul>
 			</div>
 		</div>
 		
 		<script src="../require-jquery.js" type='text/javascript'></script>
 		<script type='text/javascript'>
-			require({ baseUrl: ".." },['contacts/contacts'])
+			require({ baseUrl: ".." },['contacts/fixtures/fixtures','contacts/contacts'])
 		</script>
+		
 	</body>
 </html>

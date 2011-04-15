@@ -11,7 +11,7 @@ define(['jupiter/model/model'], function(Model){
 		},
 		create : function(attrs){
 			return $.ajax({
-				url : '/services/categories',
+				url : '/services/categories/create',
 				dataType : 'json',
 				data : attrs,
 				type : 'post'

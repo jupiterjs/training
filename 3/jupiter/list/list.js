@@ -16,10 +16,12 @@ define(['jquery','jupiter/tmpl'], function($){
 			template = $.get(options.row);
 		
 		$.when( options.model.findAll({}),template).then(  function(items, rowData){
-			listItems(self, items, rowData[0]);
+			listItems(self, items[0], rowData[0]);
 		});
 		
-		$(options.model).bind('created', function(ev, item){
+		$([options.model]).bind('created', function(ev, item){
+			console.log('created ...')
+			
 			template.done(function(row){
 				listItems(self, [item], row);
 			})

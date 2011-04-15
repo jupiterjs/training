@@ -6,16 +6,20 @@ define(['jquery','jupiter/model/class'], function($, Class){
 		},
 		save : function(){
 			var attrs = {}, self = this;
-			$.extend(attrs, this);
+			for(var prop in this){
+				if(typeof this[prop] != 'function'){
+					attrs[prop] = this[prop];
+				}
+			}
 			
-			var deferred = this.constructor.create(attrs),
+			var deferred = this.Class.create(attrs),
 				myDeffered = $.Deferred();
 			
 			deferred.done(function(json){
 				$.extend(self, json);
 				
 				myDeffered.resolveWith(self);
-				$(Model).trigger('created', self)
+				$([self.Class]).trigger('created', self)
 			});
 			return myDeffered.promise();
 		}

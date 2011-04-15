@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>List</title>
+	</head>
+	<body>
+		<a href='javascript://' id='create'>Create</a>
+		<ul id='list'></ul>
+		<script src="../../require-jquery.js" type='text/javascript'></script>
+		<script type='text/javascript'>
+			require({ baseUrl: "../.." },[
+				'jupiter/model/model',
+				'jupiter/create/create',
+				'jupiter/fixture/fixture'], function(Model){
+				
+				
+				var Category = Model("Category",{
+					findAll: function(params){
+						return $.ajax({
+							url : '/services/categories',
+							dataType : 'json category.models',
+							type : 'get',
+							data : params
+						})
+					},
+					create : function(attrs){
+						return $.ajax({
+							url : 'foo/bar',
+							dataType : 'json',
+							data : attrs,
+							type : 'post'
+						})
+					}
+				},{});
+				
+				$.jupiter_fixture("foo/bar", function(original){
+					return original.data
+				})
+				
+				
+				
+				
+				$('#create').jupiter_create({
+					prependTo : $('#list'),
+					form : "<form><input name='name'/></form>",
+					model : Category
+				});
+			})
+		</script>
+	</body>
+</html>

@@ -1,6 +1,5 @@
 define(['jquery','jupiter/view.tmpl','jupiter/controller'], function($){
-	console.log('here ...')
-	
+
 	
 	$.Controller('Jupiter.List',{
 		init : function(){
