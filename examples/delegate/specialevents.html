@@ -1,0 +1,46 @@
+<html>
+    <head>
+    	<style>
+    		div.dbl, div.hov{
+    			color:Blue;
+				text-decoration:underline;
+				font-size:24px;
+				padding:5px;
+				margin:5px;
+				background-color:#eeeeee;
+				width:200px;
+    		}
+			.dblclick{
+				background-color:#aaaaaa;
+			}
+			.hover{
+				background-color:Green;
+			}
+    	</style>
+    </head>
+    <body>
+    	<div class='container'>
+			<div class='dbl slowdbl'>Slow Dblclick</div>
+			<div class='dbl fastdbl'>Fast Dblclick</div>
+			<div class='hov slowhover'>Slow Hover</div>
+			<div class='hov fasthover'>Fast Hover</div>
+		</div>
+	    <script type='text/javascript' src='jquery.js'></script>
+	    <script type='text/javascript' src='dblclick.js'></script>
+	    <script type='text/javascript' src='hover.js'></script>
+	    <script type='text/javascript'>
+	    	$('.container').delegate(".slowdbl", "dblclick", 1000, function(ev){
+				$(ev.target).toggleClass("dblclick");
+			})
+	    	$('.container').delegate(".fastdbl", "dblclick", 200, function(ev){
+				$(ev.target).toggleClass("dblclick");
+			})
+	    	$('.container').delegate(".slowhover", "hover", 1000, function(ev){
+				$(ev.target).toggleClass("hover");
+			})
+	    	$('.container').delegate(".fasthover", "hover", 200, function(ev){
+				$(ev.target).toggleClass("hover");
+			})
+	    </script>
+    </body>
+</html>
