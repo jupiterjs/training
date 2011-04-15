@@ -1,4 +1,4 @@
-require(['jupiter/fixture/fixture'], function(){
+define(['jupiter/fixture/fixture'], function(){
 	var catCount = 7,
 		compCount = 5,
 		locCount = 10,
@@ -6,16 +6,19 @@ require(['jupiter/fixture/fixture'], function(){
 		contacts = [],
 		randId = function(count){
 			return Math.floor( Math.random()* count) ;
-		};
+		},
+		now = new Date();
 		
 		
 	for(var i =0; i < contactsCount; i++){
 		contacts.push({
 			id: 0,
-			name : "Justin M"+i,
+			first : "Justin",
+			last : "M"+i,
 			categoryId : randId(catCount),
 			locationId : randId(locCount),
-			companyId : randId(compCount)
+			companyId : randId(compCount),
+			createdAt : new Date( now.getTime()*Math.random()  )
 		})
 	}
 	

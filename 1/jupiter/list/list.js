@@ -5,8 +5,7 @@ require(['jquery'], function($){
 		for(var i =0; i < items.length; i++){
 			var item =  items[i]
 			$('<li/>').data('item',item)
-				.text(item.name)
-				.appendTo(parent)
+				.appendTo(parent).text(item.name)
 		}
 	};
 	

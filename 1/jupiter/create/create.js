@@ -1,4 +1,4 @@
-require(['jquery'], function($){
+define(['jquery'], function($){
 	
 $.fn.jupiter_create = function(options){
 	
