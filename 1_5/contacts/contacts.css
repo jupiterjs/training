@@ -1,0 +1,38 @@
+#filters > div {
+	float: left;
+	width: 33%;
+
+	
+}
+#filters ul {
+	height: 200px;
+}
+h3 {
+	text-align: center;
+}
+
+ul {
+	overflow-y: auto;
+	margin: 0px;
+	padding: 0px;
+}
+#contacts {
+	clear: both;
+	position: fixed;
+	top: 250px;
+	bottom: 10px;
+	left: 8px;
+	right: 8px;
+}
+#bottom {
+	position: fixed;
+	top: 250px;
+	bottom: 10px;
+}
+#bottom ul{
+	position: fixed;
+	top: 276px;
+	bottom: 11px;
+	left: 9px;
+	right: 9px;
+}

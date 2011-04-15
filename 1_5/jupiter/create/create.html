@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>List</title>
+	</head>
+	<body>
+		<a href='javascript://' id='create'>Create</a>
+		<ul id='list'></ul>
+		<script src="../../require-jquery.js" type='text/javascript'></script>
+		<script type='text/javascript'>
+			require({ baseUrl: "../.." },['jupiter/create/create','jupiter/fixture/fixture'], function(){
+				$.jupiter_fixture("foo/bar", function(){
+					return {foo: "bar"}
+				})
+				
+				$('#create').jupiter_create({
+					prependTo : $('#list'),
+					form : "<form><input type='name'/></form>",
+					url : "foo/bar"
+				});
+			})
+		</script>
+	</body>
+</html>
